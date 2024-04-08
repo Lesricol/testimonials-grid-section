@@ -18,7 +18,7 @@ ul {
 }
 body {
   margin: 0;
-  font-family: "Barlow Semi Condensed", sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
   background-color: #ecf2f8;
 }
 main {
@@ -35,13 +35,14 @@ main {
   .card-container {
     display: grid;
     grid-template-columns: repeat(4, 255px);
-    grid-template-rows: repeat(2, 266px);
+    grid-template-rows: 282px 266px;
+    gap: 24px 30px;
   }
 }
 
 .card {
   border-radius: 8px;
-  padding: 32px;
+  padding: 32px 26px;
   color: white;
   box-shadow: 40px 60px 50px -47px #48556a2a;
 }
@@ -54,8 +55,10 @@ main {
 }
 
 @media screen and (width>=1110px) {
-  .card-purple{
-    gri
+  .card-purple {
+    background-position: 356px top;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
   }
 }
 
@@ -99,6 +102,12 @@ main {
   margin: 0 0 40px;
 }
 
+@media screen and (width>=1110px) {
+  .card__opinion-purple {
+    margin: 0 0 16px;
+  }
+}
+
 .card__text {
   font-weight: 500;
   font-size: 13px;
@@ -116,6 +125,26 @@ main {
   color: #48556a;
 }
 
+.card-white2 {
+  background-color: white;
+  color: #48556a;
+}
 .card-darkgray {
   background-color: #19202d;
+}
+
+@media screen and (width>=1110px) {
+  .card-white2 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+  }
+  .card-white {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .card-darkgray {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
 }
